@@ -1,0 +1,32 @@
+﻿<Window x:Class="TaskSystem.Views.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskSystem.Views" xmlns:viewmodels="clr-namespace:TaskSystem.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:LoginWindowViewModel}"
+        mc:Ignorable="d"
+        FontStyle="Italic"
+        FontWeight="SemiBold"
+        Title="LoginWindow" Height="150" Width="210"
+        MinHeight="150" MinWidth="210"
+        MaxHeight="150" MaxWidth="210"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox Text="{ Binding EnteredLogin, UpdateSourceTrigger=PropertyChanged}"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Name="LogTBox" Width="160" Height="25" VerticalAlignment="Bottom" GotFocus="LogTBox_GotFocus" LostFocus="LogTBox_LostFocus"></TextBox>
+        <TextBox Text="{ Binding EnteredPassword, UpdateSourceTrigger=PropertyChanged }" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Name="PassPBox" Width="160" Height="25" VerticalAlignment="Top"  GotFocus="PassPBox_GotFocus" LostFocus="PassPBox_LostFocus"></TextBox>
+        <TextBlock Foreground="DarkGray" IsHitTestVisible="False" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Name="LogTBlock" Width="160" Height="25" VerticalAlignment="Bottom">Login</TextBlock>
+        <TextBlock Foreground="DarkGray" IsHitTestVisible="False" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Name="PassTBlock" Width="160" Height="25" VerticalAlignment="Top">Password</TextBlock>
+        <Button Command="{ Binding UserLogInCommand }" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Name="LogButton" Width="75" Height="25" HorizontalAlignment="Left" Margin="17 5 5 5" IsDefault="True">Log In</Button>
+        <Button Command="{Binding UserSignUpCommand}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Name="RegButton" Width="75" Height="25" HorizontalAlignment="Right" Margin="5 5 17 5">Sign Up</Button>
+    </Grid>
+</Window>
