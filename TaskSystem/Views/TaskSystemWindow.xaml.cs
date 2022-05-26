@@ -389,6 +389,47 @@ namespace TaskSystem.Views
             ChangeFontSize();
 
         }
+
+
+        private void ChangeFontSize()
+        {
+            if (currentWindow.WindowState == WindowState.Maximized)
+            {
+                AllTBlocksChangeWidth(170, 370);
+                currentWindow.FontSize = 18; return;
+            }
+
+            int titleWidth = 150, descriptionWidth = 320, fontSize = 17;
+            for (
+                double windowSize = 1900;
+                windowSize > 900;
+                windowSize -= 200, descriptionWidth -= 30, titleWidth -= 25, fontSize--
+                )
+            {
+                if (currentWindow.Width > windowSize)
+                {
+                    AllTBlocksChangeWidth(titleWidth, descriptionWidth);
+                    currentWindow.FontSize = fontSize; return;
+                }
+            }
+        }
+        private void AllTBlocksChangeWidth(int titleWidth, int descriptionWidth)
+        {
+            ChangeTBlockWidth("TaskAvailableTitleTBlock", titleWidth);
+            ChangeTBlockWidth("TaskAcceptedTitleTBlock", titleWidth);
+            ChangeTBlockWidth("TaskAvailableDescTBlock", descriptionWidth);
+            ChangeTBlockWidth("TaskAcceptedDescTBlock", descriptionWidth);
+        }
+        private void ChangeTBlockWidth(string tBlockName, double newTBlockWidth)
+        {
+            foreach (var textBlock in FindVisualChildren<TextBlock>(this))
+            {
+                if (textBlock.Name == tBlockName)
+                {
+                    textBlock.Width = newTBlockWidth;
+                }
+            }
+        }
         public IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
         {
             if (depObj != null)
@@ -403,76 +444,6 @@ namespace TaskSystem.Views
                     foreach (T childOfChild in FindVisualChildren<T>(child))
                         yield return childOfChild;
                 }
-            }
-        }
-        private void ChangeTBlockWidth(string tBlockName, double newTBlockWidth)
-        {
-            foreach (var textBlock in FindVisualChildren<TextBlock>(this))
-            {
-                if (textBlock.Name == tBlockName)
-                {
-                    textBlock.Width = newTBlockWidth;
-                }
-            }
-        }
-        private void ChangeFontSize()
-        {
-
-            if (currentWindow.WindowState == WindowState.Maximized)
-            {
-                ChangeTBlockWidth("TaskAvailableTitleTBlock", 170);
-                ChangeTBlockWidth("TaskAcceptedTitleTBlock", 170);
-                ChangeTBlockWidth("TaskAvailableDescTBlock", 370);
-                ChangeTBlockWidth("TaskAcceptedDescTBlock", 370);
-                //DescWidth = 270;
-                currentWindow.FontSize = 18; return;
-            }
-            //TaskAv
-            //TaskAvailableDescTBlockColumn. = 200;
-            ChangeTBlockWidth("TaskAvailableTitleTBlock", 70);
-            ChangeTBlockWidth("TaskAcceptedTitleTBlock", 70);
-            ChangeTBlockWidth("TaskAvailableDescTBlock", 200);
-            ChangeTBlockWidth("TaskAcceptedDescTBlock", 200);
-            FontSize = 13;
-            if (currentWindow.Width > 1900)
-            {
-                ChangeTBlockWidth("TaskAvailableTitleTBlock", 150);
-                ChangeTBlockWidth("TaskAcceptedTitleTBlock", 150);
-                ChangeTBlockWidth("TaskAvailableDescTBlock", 320);
-                ChangeTBlockWidth("TaskAcceptedDescTBlock", 320);
-
-                //DescWidth = 240;
-                currentWindow.FontSize = 17; return;
-            }
-            if (currentWindow.Width > 1700)
-            {
-                ChangeTBlockWidth("TaskAvailableTitleTBlock", 130);
-                ChangeTBlockWidth("TaskAcceptedTitleTBlock", 130);
-                ChangeTBlockWidth("TaskAvailableDescTBlock", 300);
-                ChangeTBlockWidth("TaskAcceptedDescTBlock", 300);
-
-                //DescWidth = 230;
-                currentWindow.FontSize = 16; return;
-            }
-            if (currentWindow.Width > 1500)
-            {
-                ChangeTBlockWidth("TaskAvailableTitleTBlock", 110);
-                ChangeTBlockWidth("TaskAcceptedTitleTBlock", 110);
-                ChangeTBlockWidth("TaskAvailableDescTBlock", 280);
-                ChangeTBlockWidth("TaskAcceptedDescTBlock", 280);
-
-                //DescWidth = 220;
-                currentWindow.FontSize = 15; return;
-            }
-            if (currentWindow.Width > 1300)
-            {
-                ChangeTBlockWidth("TaskAvailableTitleTBlock", 90);
-                ChangeTBlockWidth("TaskAcceptedTitleTBlock", 90);
-                ChangeTBlockWidth("TaskAvailableDescTBlock", 260);
-                ChangeTBlockWidth("TaskAcceptedDescTBlock", 260);
-
-                //DescWidth = 210;
-                currentWindow.FontSize = 14; return;
             }
         }
 

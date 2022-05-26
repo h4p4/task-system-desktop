@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eSjF9faJgla6PuLU08iK9L6ZMT3T+rA4SPvWc1qUSlBO3c7T4k5yx6W/zfZkFsbbLTElcs4cdJrAuiRmP542sQ==",
+  "dgSpecHash": "ljncqIBMEvYq/Ax9/j0OOLksIYf9+a7xWZQyHcUWfKmCL66SF+bklQcAqxzPOBLQwANMyzgnxgzsiGfcFVE9eQ==",
   "success": true,
-  "projectFilePath": "E:\\Desktop\\tsksyst\\task-system-desktop\\TaskSystem\\TaskSystem.csproj",
+  "projectFilePath": "E:\\Desktop\\Task System\\TaskSystem\\TaskSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Альберт\\.nuget\\packages\\aspose.pdf\\22.5.0\\aspose.pdf.22.5.0.nupkg.sha512",
     "C:\\Users\\Альберт\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",

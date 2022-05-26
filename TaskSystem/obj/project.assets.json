@@ -6949,11 +6949,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Desktop\\tsksyst\\task-system-desktop\\TaskSystem\\TaskSystem.csproj",
+      "projectUniqueName": "E:\\Desktop\\Task System\\TaskSystem\\TaskSystem.csproj",
       "projectName": "TaskSystem",
-      "projectPath": "E:\\Desktop\\tsksyst\\task-system-desktop\\TaskSystem\\TaskSystem.csproj",
+      "projectPath": "E:\\Desktop\\Task System\\TaskSystem\\TaskSystem.csproj",
       "packagesPath": "C:\\Users\\Альберт\\.nuget\\packages\\",
-      "outputPath": "E:\\Desktop\\tsksyst\\task-system-desktop\\TaskSystem\\obj\\",
+      "outputPath": "E:\\Desktop\\Task System\\TaskSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
