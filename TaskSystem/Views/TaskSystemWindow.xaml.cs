@@ -60,11 +60,11 @@ namespace TaskSystem.Views
             //binding.Mode = BindingMode.TwoWay;
             //binding.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged;
 
-            //ChangeFontSize();
+            //ChangeFontAndTBlocksSize();
         }
         private void FontControlTimer_Tick(object sender, EventArgs e)
         {
-            ChangeFontSize();
+            ChangeFontAndTBlocksSize();
         }
         private void Timer_Tick(object sender, EventArgs e)
         {
@@ -100,7 +100,7 @@ namespace TaskSystem.Views
             if (FilterTaskCBox.SelectedIndex == 2)
                 FilterByUserLoginTBox.Visibility = Visibility.Visible;
             System.Threading.Tasks.Task.Delay(50);
-            ChangeFontSize();
+            ChangeFontAndTBlocksSize();
         }
         private void ChangeTaskStatusCBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -229,14 +229,14 @@ namespace TaskSystem.Views
 
         private void myTasksTab_Selected(object sender, RoutedEventArgs e)
         {
-            ChangeFontSize();
+            ChangeFontAndTBlocksSize();
             FilterTaskCBox.Visibility = Visibility.Hidden;
             TaskCBox.Visibility = Visibility.Visible;
             TaskCBox.SelectedIndex = 0;
         }
         private void availableTasksTab_Selected(object sender, RoutedEventArgs e)
         {
-            ChangeFontSize();
+            ChangeFontAndTBlocksSize();
             TaskCBox.Visibility = Visibility.Hidden;
             FilterTaskCBox.Visibility = Visibility.Visible;
             FilterTaskCBox.SelectedIndex = 0;
@@ -386,12 +386,12 @@ namespace TaskSystem.Views
             // if visible
             var GlobalGridLeftColumnsActualWidth = firt.ActualWidth + secd.ActualWidth + thrd.ActualWidth + frth.ActualWidth + ffth.ActualWidth;
             LeftGrid.Width = GlobalGridLeftColumnsActualWidth;
-            ChangeFontSize();
+            ChangeFontAndTBlocksSize();
 
         }
 
 
-        private void ChangeFontSize()
+        private void ChangeFontAndTBlocksSize()
         {
             if (currentWindow.WindowState == WindowState.Maximized)
             {
@@ -503,14 +503,14 @@ namespace TaskSystem.Views
         }
         private void Window_StateChanged(object sender, EventArgs e)
         {
-            ChangeFontSize();
+            ChangeFontAndTBlocksSize();
         }
 
 
         private void TaskCBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             System.Threading.Tasks.Task.Delay(50);
-            ChangeFontSize();
+            ChangeFontAndTBlocksSize();
         }
     }
 }

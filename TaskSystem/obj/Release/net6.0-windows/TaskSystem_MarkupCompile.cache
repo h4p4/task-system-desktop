@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\TaskSystem Versions\TaskSystemDesktopExtended+AbsoluteValues+MVVM+ProperTBoxes+ShowAllUsers+Anims+Add+Delete+ResizableDescriptionAndTitle\TaskSystem\TaskSystem\obj\Release\net6.0-windows\
+E:\Desktop\Task System\TaskSystem\obj\Release\net6.0-windows\
 TaskSystem
 none
 false
 TRACE;RELEASE;NET;NET6_0;NETCOREAPP
-D:\TaskSystem Versions\TaskSystemDesktopExtended+AbsoluteValues+MVVM+ProperTBoxes+ShowAllUsers+Anims+Add+Delete+ResizableDescriptionAndTitle\TaskSystem\TaskSystem\App.xaml
-71835254941
+E:\Desktop\Task System\TaskSystem\App.xaml
+4-1083369893
 
-19866316254
-243-188135162
-Themes\ColourfulDarkTheme.xaml;Themes\ColourfulLightTheme.xaml;Themes\DarkTheme.xaml;Themes\LightTheme.xaml;Views\LoginWindow.xaml;Views\SignUpWindow.xaml;Views\TaskSystemWindow.xaml;
+16-875284741
+260177021528
+Views\LoginWindow.xaml;Views\SignUpWindow.xaml;Views\TasksReportWindow.xaml;Views\TaskSystemWindow.xaml;
 
 False
 
