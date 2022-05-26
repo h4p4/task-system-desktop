@@ -1,19 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
-using TaskSystem;
-using TaskSystem.ViewModels;
 using TaskSystem.Models;
 using TaskSystem.Views;
-using Microsoft.VisualStudio.PlatformUI;
-using Prism.Commands;
 
 namespace TaskSystem.ViewModels
 {
